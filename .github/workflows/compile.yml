@@ -15,8 +15,7 @@ jobs:
         ref: 60aaf855ba2e15e20d0efbe440c8ff071b719580
 
     - name: Build C Code
-      run: |
-        autoreconf -h 
+      run: | 
         autoreconf -fvi   
-        ./configure 
+        ./configure --enable-debug=full 
         make 
